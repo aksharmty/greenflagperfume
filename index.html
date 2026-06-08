@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Green Flag Perfume - Coming Soon</title>
     <style>
-        /* Margin clear karne ke liye aur height set karne ke liye */
         * {
             box-sizing: border-box;
             margin: 0;
@@ -13,32 +12,38 @@
         }
 
         body, html {
-            height: 100%;
+            width: 100%;
+            /* Overflow hidden hata diya hai taaki agar image badi ho toh scroll ho sake */
+            background-color: #000; /* Agar screen badi ho toh side mein khali jagah black dikhegi */
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
 
-        /* Pure background ko cover karne ke liye perfect CSS */
+        /* Image Wrapper jo image ko full width dega aur height auto rakhega */
         .bg-container {
-            background-image: url('coming-soon.jpeg');
-            height: 100vh; /* Viewport height 100% */
-            width: 100%;
-            background-position: center;
-            background-repeat: no-repeat;
-            background-size: cover; /* Yeh image ko stretch hone se rokta hai aur center rakhta hai */
             position: relative;
+            width: 100%;
+            display: inline-block;
         }
 
-        /* Background par halka sa dark overlay taaki text ekdam saaf padha jaye */
+        /* Yeh rule ensure karega ki image 100% poori dikhe aur kabhi cut na ho */
+        .bg-image {
+            width: 100%;
+            height: 800px;
+            display: block;
+			position:relative;
+        }
+
+        /* Background par halka sa dark overlay taaki white text achhe se chamke */
         .overlay {
             position: absolute;
             top: 0; 
             left: 0; 
             width: 100%;
             height: 100%;
-            background: rgba(0, 0, 0, 0.5); /* 0.5 ko kam ya zyada kar sakte hain dark/light karne ke liye */
+            background: rgba(0, 0, 0, 0.4); 
         }
 
-        /* Content ko bilkul center mein alignment dena */
+        /* Content hamesha image ke bilkul center mein rahega, chahe scroll ho */
         .content {
             position: absolute;
             top: 50%;
@@ -47,32 +52,34 @@
             text-align: center;
             color: white;
             width: 90%;
-            max-width: 600px; /* Mobile par content screen se bahar na jaye */
-            padding: 20px;
-            z-index: 2; /* Overlay ke upar dikhane ke liye */
+            max-width: 600px;
+            z-index: 2;
         }
 
         .brand-name {
-            font-size: 3rem;
+            font-size: 3.5rem;
             font-weight: bold;
             letter-spacing: 2px;
             margin-bottom: 10px;
             text-transform: uppercase;
+            text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
         }
 
         .tagline {
-            font-size: 1.3rem;
+            font-size: 1.5rem;
             margin-bottom: 40px;
             opacity: 0.9;
+            text-shadow: 1px 1px 5px rgba(0,0,0,0.7);
         }
 
         .call-text {
             font-size: 1.1rem;
             margin-bottom: 15px;
             letter-spacing: 1px;
+            text-shadow: 1px 1px 4px rgba(0,0,0,0.7);
         }
 
-        /* Clickable phone number jo continuous bounce/pulse karega */
+        /* Clickable phone number with premium blur look */
         .phone-number {
             display: inline-block;
             font-size: 2rem;
@@ -83,8 +90,8 @@
             border-radius: 50px;
             text-decoration: none;
             transition: all 0.3s ease;
-            background: rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(5px); /* Premium glass look */
+            background: rgba(0, 0, 0, 0.5); /* Background thoda dark kiya taaki number clear dikhe */
+            backdrop-filter: blur(5px);
             animation: pulseAnimation 2s infinite;
         }
 
@@ -94,25 +101,27 @@
             box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
         }
 
-        /* Animation loop */
+        /* Animation */
         @keyframes pulseAnimation {
             0% { transform: scale(1); }
             50% { transform: scale(1.05); }
             100% { transform: scale(1); }
         }
 
-        /* Mobile phones ke liye settings automatic thodi choti ho jayengi */
-        @media (max-width: 480px) {
-            .brand-name { font-size: 2rem; }
-            .tagline { font-size: 1rem; }
-            .phone-number { font-size: 1.5rem; padding: 10px 25px; }
+        /* Mobile Responsive Settings */
+        @media (max-width: 768px) {
+            .brand-name { font-size: 2.2rem; }
+            .tagline { font-size: 1.1rem; margin-bottom: 20px; }
+            .phone-number { font-size: 1.4rem; padding: 10px 25px; }
         }
     </style>
 </head>
 <body>
 
     <div class="bg-container">
+        <img src="coming-soon.jpeg" alt="Coming Soon" class="bg-image">
         <div class="overlay"></div>
+        
         <div class="content">
             <div class="brand-name">Green Flag Perfume</div>
             <div class="tagline">Something Luxury Is Coming Soon...</div>
