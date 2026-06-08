@@ -33,20 +33,10 @@
 			position:relative;
         }
 
-        /* Background par halka sa dark overlay taaki white text achhe se chamke */
-        .overlay {
-            position: absolute;
-            top: 0; 
-            left: 0; 
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.4); 
-        }
-
         /* Content hamesha image ke bilkul center mein rahega, chahe scroll ho */
         .content {
             position: absolute;
-            top: 50%;
+            top: 60%;
             left: 50%;
             transform: translate(-50%, -50%);
             text-align: center;
@@ -54,22 +44,6 @@
             width: 90%;
             max-width: 600px;
             z-index: 2;
-        }
-
-        .brand-name {
-            font-size: 3.5rem;
-            font-weight: bold;
-            letter-spacing: 2px;
-            margin-bottom: 10px;
-            text-transform: uppercase;
-            text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
-        }
-
-        .tagline {
-            font-size: 1.5rem;
-            margin-bottom: 40px;
-            opacity: 0.9;
-            text-shadow: 1px 1px 5px rgba(0,0,0,0.7);
         }
 
         .call-text {
@@ -122,10 +96,7 @@
         <img src="coming-soon.jpeg" alt="Coming Soon" class="bg-image">
         <div class="overlay"></div>
         
-        <div class="content">
-            <div class="brand-name">Green Flag Perfume</div>
-            <div class="tagline">Something Luxury Is Coming Soon...</div>
-            
+        <div class="content">           
             <div class="call-text">For Inquiry & Pre-Orders:</div>
             <a href="tel:+918750685516" class="phone-number">+91 87506 85516</a>
         </div>
