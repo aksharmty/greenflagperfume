@@ -1,2 +1,107 @@
-greenflagperfume.com<br>
-coming soon 
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Green Flag Perfume - Coming Soon</title>
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            overflow: hidden;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .bg-image {
+            background-image: url('coming-soon.jpeg');
+            height: 100%;
+            width: 100%;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            position: relative;
+        }
+
+        /* Background ko thoda dark karne ke liye taaki text saaf dikhe */
+        .overlay {
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: rgba(0, 0, 0, 0.4); 
+        }
+
+        .content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            color: white;
+            width: 90%;
+        }
+
+        .brand-name {
+            font-size: 3.5rem;
+            font-weight: bold;
+            letter-spacing: 2px;
+            margin-bottom: 5px;
+            text-transform: uppercase;
+        }
+
+        .tagline {
+            font-size: 1.5rem;
+            margin-bottom: 40px;
+            opacity: 0.9;
+        }
+
+        .call-text {
+            font-size: 1.1rem;
+            margin-bottom: 10px;
+            letter-spacing: 1px;
+        }
+
+        .phone-number {
+            display: inline-block;
+            font-size: 2.2rem;
+            font-weight: bold;
+            color: #ffffff;
+            border: 2px solid #ffffff;
+            padding: 12px 30px;
+            border-radius: 50px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            background: rgba(255, 255, 255, 0.1);
+            animation: pulseAnimation 2s infinite;
+        }
+
+        .phone-number:hover {
+            background: #ffffff;
+            color: #000000;
+        }
+
+        /* Phone number ke liye ek sundar continuous animation */
+        @keyframes pulseAnimation {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+    </style>
+</head>
+<body>
+    <div class="bg-image">
+        <div class="overlay"></div>
+        <div class="content">
+            <!-- Aapka Brand/Domain Name -->
+            <div class="brand-name">Green Flag Perfume</div>
+            <div class="tagline">Something Luxury Is Coming Soon...</div>
+            
+            <!-- Phone Number Section -->
+            <div class="call-text">For Inquiry & Pre-Orders:</div>
+            <a href="tel:+918750685516" class="phone-number">+91 8750685516</a>
+        </div>
+    </div>
+</body>
+</html>
+
+```
+
+> 💡 **Tip:** Agar aapke paas official email id hai (jaise: `info@greenflagperfume.com`), toh phone number ke thoda neeche aap use bhi daal sakte hain. Isse jo log call nahi karna chahte, woh email kar sakenge!
